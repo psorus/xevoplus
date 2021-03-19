@@ -15,7 +15,7 @@ class trajmute(evo):
             s.q[i]=s.q[i].mutate()
         stre=[zw.strength()* (1 if zw.shallmaximize() else -1)  for zw in s.q]
         wori=np.argmin(stre)
-        s.q[wori]=np.random.choice(s.q)
+        s.q[wori]=np.random.choice(s.q,p=[float(wori!=i)/(len(s.q)-1) for i in range(len(s.q))])
 
     
 

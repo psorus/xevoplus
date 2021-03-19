@@ -11,9 +11,9 @@ from trivmutetraj import *
 from debugtraj import *
 
 worker=trajmute()
-#worker=crossevo()
+worker=crossevo()
 #worker=trajmuteplus()
-worker=trivmutetraj()
+#worker=trivmutetraj()
 #worker=debugtraj()
 
 population=10
@@ -39,7 +39,7 @@ elif work=="gotozero":
 
 c=erun(worker,work,population=population)
 
-c.run(goalstrength=goal,maxsteps=100000)
+c.run(goalstrength=goal,maxsteps=1000)
 
 
 win=c.getwinner()
