@@ -49,8 +49,8 @@ m2=50
 
 #opt=crossevo()
 #opt=ising1devo(temp=1.0)
-#opt=showii(temp=0.1,m1=m1,m2=m2)
-opt=showii(temp=10.0,m1=m1,m2=m2,close="+")
+#opt=showii(temp=0.1,m1=m1,m2=m2,mergews=0.3)
+opt=showii(temp=10.0,m1=m1,m2=m2,close="o")
 
 
 

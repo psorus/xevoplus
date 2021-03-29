@@ -63,6 +63,9 @@ class ising2devo(evo):
             delta=(s.mean_func(acc)-acs)#the higher, the more probable switch
             if np.random.random()<np.exp((delta-s.garant)/s.temp):
                 dex=argmax(acc)
+                if acc[dex]<acs or ic[dex]==i:
+                    nq[i]=s.q[i].copy()
+                    continue
                 if s.mergews>0.0 and np.random.random()<s.mergews:
                     nq[i]=s.q[ic[dex]]+s.q[i]
                 else:
