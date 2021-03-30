@@ -75,7 +75,8 @@ class ising2devo(evo):
 
 
     def _copy(s):
-        return ising2devo(s.wsmerge,s.dex)
+        return ising2devo(s,m1=s.m1,m2=s.m2,temp=s.temp,garant=s.garant,mergews=s.mergews,mean_func=s.mean_func,close=s.close)
+
 
     def to_array(s,odex=0):
         ret=np.zeros((s.m1,s.m2))
